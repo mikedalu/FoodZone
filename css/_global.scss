@@ -1,0 +1,145 @@
+@import "variables";
+/*
+==== 01 TYPOGRAPHY  
+ 
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+font weights: 400 
+line height: 1
+
+			/* 
+MAIN COLOR: #e67e22;
+lighter color; #eb9843
+GREY COLOR: #555; #333
+
+Tints:
+Shades: 
+Acents: 
+Greys: #555
+
+==== SHADOWS
+		box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.09);
+
+
+===BORDER-RADIUS
+
+==WHIESPACE
+REM definition : Root Element Font Size by default 1 rem = 16px;
+.test{
+	max-width: 1000px; // if the width of the parent is bigger it take the given unit else if the container is smaller, it takes up 100% of the width
+}
+
+
+*/
+
+/* **************************
+  GENERAL COMPONENT
+  */
+
+*,
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	overflow-x: hidden;
+	font-size: 62.5%; // Percentage of user's broswer font-size setting
+}
+body {
+	font-family: "Rubik", sans-serif;
+	font-weight: 400;
+	color: $grey1;
+	overflow-x: hidden;
+}
+
+.container {
+	max-width: 120rem;
+	padding: 0 3.2rem;
+	margin: 0 auto;
+}
+.heading-primary,
+.heading-secondary {
+	font-weight: 700;
+	color: $grey2;
+	letter-spacing: -0.5px;
+}
+.heading-primary {
+	font-size: 5.2rem;
+	line-height: 1.05;
+	color: $grey2;
+	margin-bottom: 3.2rem;
+}
+.heading-secondary {
+	font-size: 4.2rem;
+	line-height: 1.3;
+	margin-bottom: 9.6rem;
+}
+.heading-tertiary {
+	font-size: 3rem;
+	line-height: 1.2;
+	margin-bottom: 3.2rem;
+}
+.subheading {
+	display: block;
+	font-size: 1.8rem;
+	font-weight: 500;
+	color: $darkTint1;
+	text-transform: uppercase;
+	margin-bottom: 1.6rem;
+	letter-spacing: 0.75px;
+}
+
+.grid {
+	display: grid;
+	row-gap: 9.6rem;
+	column-gap: 6.4rem;
+	margin-bottom: 9.6rem;
+}
+// .grid:last-child {
+// 	margin-bottom: 0; /*this allows multiple grids in same section*/
+// }
+//or
+.grid:not(:last-child) {
+	margin-bottom: 9.6rem;
+}
+.grid-2-cols {
+	grid-template-columns: 1fr 1fr;
+}
+.grid-3-cols {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-4-cols {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid-5-cols {
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.grid-5-cols-footer {
+	grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+.ai-c {
+	align-items: center;
+}
+.jc-sb {
+	justify-content: space-between;
+}
+.jc-c {
+	justify-content: center;
+}
+.jc-sa {
+	justify-content: space-around;
+}
+.flex {
+	display: flex;
+}
+.margin-bottom-sm {
+	margin-bottom: 1.6rem !important;
+}
+.margin-bottom-md {
+	margin-bottom: 4.2rem !important;
+}

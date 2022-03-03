@@ -1,0 +1,663 @@
+@import "global";
+@import "variables";
+
+/**************************
+  HEADER
+  */
+.logo {
+	height: 2.2rem;
+	font-size: 1.8rem;
+}
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $lightTint1;
+	height: 9.6rem;
+	padding: 0 4.8rem;
+	position: relative;
+}
+
+/*====================
+MOBILE NAV
+*/
+.btn-mobile-nav {
+	border: none;
+	background: none;
+	cursor: pointer;
+	display: none;
+}
+
+.icon-mobile-nav[name="close-outline"],
+.icon-mobile-nav[name="menu-outline"] {
+	display: none;
+}
+.icon-mobile-nav {
+	color: red;
+}
+
+/* **************************
+  HERO
+  */
+.nav-list {
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	gap: 4.8rem;
+	li a:link,
+	li a:visited {
+		display: inline-block;
+		text-decoration: none;
+		color: $grey1;
+		font-size: 1.8rem;
+		transition: all 0.3s;
+		&:hover,
+		&:active {
+			color: $darkTint1;
+		}
+	}
+	// .cta a:link,
+	// .cta a:visited {
+	// 	background-color: $primaryColor;
+	// 	color: $white;
+	// 	font-size: 1.8rem;
+	// 	padding: 1rem;
+	// 	border-radius: 1rem;
+	// 	&:hover,
+	// 	&:active {
+	// 		background-color: $darkTint1;
+	// 		color: $white;
+	// 	}
+	// }
+}
+/* **************************
+  HERO
+  */
+.section-hero {
+	background-color: $lightTint1;
+	padding: 4.8rem 0 9.6rem;
+}
+.hero {
+	max-width: 130rem;
+	display: grid;
+	gap: 9.6rem;
+	align-items: center;
+	grid-template-columns: 1fr 1fr;
+	margin: 0 auto;
+	padding: 0 3.2rem;
+
+	.hero-description {
+		font-size: 2rem;
+		line-height: 1.6;
+		margin-bottom: 4.8rem;
+	}
+	.btn:link,
+	.btn:visited {
+		display: inline-block;
+		font-size: 2rem;
+		font-family: inherit;
+
+		padding: 1.6rem 3.2rem;
+		border-radius: 9px;
+		text-decoration: none;
+		// put trasition on an original state
+		transition: all 0.3s ease;
+		&:hover,
+		&:active {
+			background-color: $darkTint1;
+		}
+	}
+
+	.btn-full:link,
+	.btn-full:visited {
+		background-color: $primaryColor;
+		color: $white;
+		&:hover,
+		&:active {
+			background-color: $darkTint1;
+			box-shadow: inset 0 0 0 3px $white; //trick to set border in the inside
+		}
+	}
+	.btn-outline:link,
+	.btn-outline:visited {
+		background-color: $white;
+		color: $grey1;
+		&:hover,
+		&:active {
+			background-color: $lightTint1;
+		}
+	}
+
+	.hero-img {
+		width: 100%;
+	}
+}
+.margin-right-sm {
+	margin-right: 1.6rem;
+}
+
+.delivered-meals {
+	margin-top: 8rem;
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+	.delivered-imgs {
+		display: flex;
+		img {
+			height: 4.8rem;
+			width: 4.8rem;
+			border-radius: 50%;
+			margin-right: -1.6rem;
+			border: 3px solid $lightTint1;
+		}
+		img:last-child {
+			margin: 0;
+		}
+	}
+	.delivered-text {
+		font-size: 1.8rem;
+		span {
+			color: $darkTint1;
+			font-weight: 700;
+			font-size: 1.8rem;
+		}
+	}
+}
+
+/* **************************
+  FEATURED IN
+  */
+.section-featured {
+	padding: 4.8rem 0;
+	.featured-heading-in {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		letter-spacing: 0.75px;
+		font-weight: 500;
+		text-align: center;
+		margin-bottom: 2.4rem;
+	}
+	.logos img {
+		height: 3.2rem;
+		filter: brightness(0);
+		opacity: 55%;
+	}
+}
+
+/* **************************
+  SECTION HOW
+  */
+.section-how {
+	padding: 9.6rem 0;
+	.step-number {
+		font-size: 8.6rem;
+		font-weight: 600;
+		color: $grey3;
+		margin-bottom: 1.2rem;
+	}
+	.step-description {
+		font-size: 1.8rem;
+		line-height: 1.2;
+	}
+	.step-img-box {
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			width: 60%;
+			padding-bottom: 60%;
+			background-color: $lightTint1;
+			position: absolute;
+			border-radius: 50%;
+			top: 50%;
+			right: 50%;
+			transform: translate(50%, -50%);
+			z-index: -9;
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 50%;
+			padding-bottom: 50%;
+			background-color: $lightTint2;
+			position: absolute;
+			border-radius: 50%;
+			top: 50%;
+			right: 50%;
+			transform: translate(50%, -50%);
+			z-index: -5;
+		}
+	}
+	.step-img {
+		width: 35%;
+	}
+}
+
+/* **************************
+  MEAL SECTION
+  */
+.section-meals {
+	padding: 9.6rem 0;
+	.container img {
+		width: 100%;
+	}
+	.container .meal-content {
+		padding: 3.2rem 4.8rem 4.8rem;
+	}
+	.container .meal {
+		box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.09);
+		border-radius: 11px;
+		overflow: hidden;
+		transition: 0.5s all;
+		&:hover {
+			transform: translateY(-1rem);
+			box-shadow: 0 4.4rem 6.8rem rgba(0, 0, 0, 0.07);
+		}
+	}
+
+	.container .subheading {
+		font-size: 1.8rem;
+		font-weight: 500;
+	}
+	.container .meal-title {
+		font-size: 2.4rem;
+		font-weight: 600;
+		color: $grey1;
+		margin-bottom: 3.2rem;
+	}
+	.container .tag {
+		display: inline-block;
+		padding: 1.2rem;
+		font-size: 1.6rem;
+		background-color: $green;
+		border-radius: 100px;
+		margin: 2rem;
+	}
+
+	.container .meal-attributes {
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+		.meal-icon {
+			height: 2.4rem;
+			width: 2.4rem;
+			color: $primaryColor;
+		}
+		gap: 2rem;
+		li {
+			font-size: 1.8rem;
+			display: flex;
+			align-items: center;
+			gap: 1.6rem;
+		}
+		strong {
+			font-weight: 500;
+		}
+	}
+}
+
+.diets,
+.pricing-plan {
+	.list {
+		list-style-type: none;
+	}
+	.list-item {
+		font-size: 1.8rem;
+		display: flex;
+		align-items: center;
+		gap: 1.6rem;
+	}
+	.list .list-item .list-icon {
+		width: 2.8rem;
+		height: 2.8rem;
+		color: $primaryColor;
+	}
+}
+
+.all-recipes {
+	margin-top: 2rem;
+	text-align: center;
+	font-size: 1.8rem;
+	a:link,
+	a:visited {
+		display: inline-block;
+		text-decoration: none;
+		color: $primaryColor;
+		border-bottom: 1px solid currentColor;
+		padding-bottom: 0.2rem;
+		transition: all 0.3s;
+	}
+	a:hover,
+	a:active {
+		border-bottom: 1px solid transparent;
+	}
+}
+
+/* **************************
+  TESTIMONIAL SECTION
+  */
+.section-testimonials {
+	background-color: $lightTint1;
+	display: grid;
+	align-items: center;
+	grid-template-columns: 55fr 45fr;
+	margin-top: 9rem;
+}
+.testimonial-container {
+	padding: 2.6rem;
+}
+.testimonials {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4.8rem;
+
+	.testimonial img {
+		width: 6.4rem;
+		border-radius: 50%;
+	}
+	.testimonial-text {
+		font-size: 1.8rem;
+		line-height: 1.8;
+		margin-bottom: 1.6rem;
+	}
+	.testimonial-name {
+		font-size: 1.6rem;
+		color: $grey2;
+	}
+}
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1.6rem;
+	padding: 1.6rem;
+}
+.gallery-item {
+	overflow: hidden;
+}
+.gallery-item img {
+	display: block;
+	width: 100%;
+	transition: all 0.3s;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+/* **************************
+	SECTION Pricing
+  */
+.section-pricing {
+	padding: 9.6rem 0;
+	.container img {
+		width: 100%;
+	}
+}
+
+.btn:link,
+.btn:visited {
+	display: inline-block;
+	background-color: $primaryColor;
+	font-size: 2rem;
+	color: $white;
+	padding: 1.6rem 3.2rem;
+	border-radius: 1rem;
+	text-decoration: none;
+	// put trasition on an original state
+	transition: all 0.3s ease;
+	&:hover,
+	&:active {
+		background-color: $darkTint1;
+	}
+}
+.pricing-plan {
+	align-items: center;
+	border-radius: 1.1rem;
+	padding: 2rem;
+	width: 75%;
+}
+.pricing-plan-starter {
+	justify-self: end;
+}
+.pricing-plan-complete {
+	background-color: $lightTint1;
+	position: relative;
+	overflow: hidden; /* to hide the overflow on the ::after element*/
+}
+.pricing-plan-complete::after {
+	content: "Best value";
+	position: absolute;
+	text-transform: uppercase;
+	top: 3.2rem;
+	right: -10%;
+	font-size: 1.4rem;
+	padding: 0.8rem 4.3rem;
+	background-color: $secondaryColor;
+	color: $grey2;
+	transform: rotate(45deg);
+}
+.plan-header {
+	text-align: center;
+	margin-bottom: 4.8rem;
+}
+.plan-name {
+	color: $primaryColor;
+	font-weight: 600;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.75;
+	margin-bottom: 3.2rem;
+}
+.plan-price {
+	font-size: 6.2rem;
+	font-weight: 600;
+	color: $grey2;
+	margin-bottom: 1.6rem;
+}
+.plan-price span {
+	font-size: 3rem;
+	font-weight: 500;
+}
+.plan-text {
+	font-size: 1.6rem;
+	line-height: 1.6;
+}
+.plan-sign-up {
+	text-align: center;
+	margin-top: 4.8rem;
+}
+.list {
+	padding: 0 4.2rem;
+}
+.list .list-item {
+	margin: 1.6rem;
+	font-size: 1.6rem;
+	line-height: 1.2;
+}
+
+/* **************************
+	FEATURE
+  */
+.plan-details {
+	font-size: 1.6rem;
+	line-height: 1.6;
+	text-align: center;
+}
+.feature {
+	font-size: 1.6rem;
+}
+.feature-icon {
+	font-size: 1.8rem;
+	margin-bottom: 3.2rem;
+	width: 3.4rem;
+	height: 3.4rem;
+	color: $primaryColor;
+	background-color: $lightTint2;
+	padding: 2rem;
+	border-radius: 50%;
+}
+.feature-title {
+	font-size: 2.4rem;
+	color: $grey1;
+	font-weight: 700;
+	margin-bottom: 1.6rem;
+}
+.feature-text {
+	font-size: 1.8rem;
+	line-height: 1.8rem;
+}
+
+/*---------------------
+CTA SECTOON
+*/
+.section-cta {
+	/*top horizontal bottom */
+
+	padding: 4.8rem 0 12.8rem;
+}
+.cta {
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	background-color: $primaryColor;
+	box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+	border-radius: 1.1rem;
+	height: auto;
+}
+.cta-text-box {
+	padding: 6.4rem;
+	color: #45260a;
+}
+.cta .heading-secondary {
+	color: #45260a;
+	margin-bottom: 3.2rem;
+}
+.cta-text {
+	font-size: 1.8rem;
+	line-height: 1.8;
+}
+.cta-img-box {
+	background-image: linear-gradient(to right bottom, rgba(230, 125, 34, 0.418), rgba(235, 151, 67, 0.226)), url("../img/eating.jpg");
+
+	background-position: center;
+	background-size: cover;
+}
+
+// CTA FORm
+
+.cta-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 3.2rem;
+	row-gap: 2.4rem;
+}
+.cta-form input,
+.cta-form select {
+	width: 100%;
+	font-size: 1.8rem;
+	color: inherit;
+	font-family: inherit;
+	padding: 1.2rem;
+	border: none;
+	border-radius: 0.9rem;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.cta-form input::placeholder {
+	color: #aaa;
+}
+.cta-form label {
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 500;
+	margin-bottom: 1.2rem;
+}
+
+.btn-form {
+	align-self: end;
+	display: inline-block;
+	background-color: #45260a;
+	font-size: 2rem;
+	font-family: inherit;
+	color: $white;
+	padding: 1.2rem;
+	border-radius: 1rem;
+	text-decoration: none;
+	// put trasition on an original state
+	transition: all 0.3s ease;
+	&:hover,
+	&:active {
+		color: $grey1;
+		background-color: $white;
+	}
+}
+
+/*
+==================================
+FOOTER SECTION
+=================
+*/
+
+.footer {
+	padding: 6.8rem 0;
+	border-top: 1px solid #eee;
+}
+.footer-logo {
+	display: block;
+	margin-bottom: 3.2rem;
+}
+.logo-col {
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+}
+.social-links {
+	list-style-type: none;
+	display: flex;
+	gap: 2.4rem;
+	.social-icon {
+		height: 2.4rem;
+		width: 2.4rem;
+	}
+}
+.copyright {
+	font-size: 1.6rem;
+
+	margin-top: auto; /* to push the flex item bottom */
+}
+.footer-heading {
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-bottom: 3.2rem;
+}
+.contacts {
+	font-style: normal;
+	font-size: 1.6rem;
+	line-height: 1.6;
+
+	p {
+		margin-top: 2.4rem;
+	}
+	p a {
+		text-decoration: none;
+		color: inherit;
+		margin: auto;
+	}
+}
+.footer-nav {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited {
+	text-decoration: none;
+	font-size: 1.6rem;
+	transition: all 0.5s;
+	color: $greyLightestOnWhite;
+	&:hover,
+	&:active {
+		color: $grey1;
+	}
+}
