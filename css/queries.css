@@ -284,18 +284,19 @@ therefore 62.5% does go well
     display: block;
   }
   .nav {
-    background-color: rgba(241, 243, 231, 0.966);
+    background-color: #b58640;
     position: absolute;
     top: 0;
+    padding-top: 5rem;
     left: 0;
     height: 100vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -317,7 +318,7 @@ therefore 62.5% does go well
   .icon-mobile-nav {
     height: 4.8rem;
     width: 4.8rem;
-    color: #333;
+    color: #2d2210;
   }
   .icon-mobile-nav[name="menu-outline"] {
     display: block;
@@ -338,7 +339,7 @@ therefore 62.5% does go well
   .nav-list li a:link,
   .nav-list li a:visited {
     font-size: 3rem;
-    color: red;
+    color: #2d2210;
   }
 }
 
