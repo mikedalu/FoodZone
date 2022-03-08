@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap");
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: Tahoma, Verdana, Segoe, sans-serif;
+			}
+			.main {
+				margin: 40px auto;
+				display: flex;
+				width: 1170px;
+			}
+			.news {
+				background-color: white;
+				color: #2e4272;
+				border: 1px solid #2e4272;
+				padding: 0 10px 0 10px;
+				line-height: 28px;
+			}
+			.container {
+				position: relative;
+				width: 100%;
+				background-color: #2e4272;
+				font-size: 12px;
+			}
+			.boxPadding {
+				position: relative;
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+			}
+			.box {
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				overflow: hidden;
+				margin: 0px;
+				padding-left: 0px;
+				display: flex;
+				line-height: 30px;
+				font-size: 12px;
+			}
+			.left,
+			.right {
+				position: absolute;
+				width: 40px;
+				height: 100%;
+				top: 0px;
+				background-color: #2e4272;
+			}
+			.left {
+				left: 0px;
+				background-color: linear-gradient(90deg, rgba(46, 66, 114, 1) 0%, rgba(46, 66114, 0) 80%);
+			}
+			.right {
+				left: 0px;
+				background-color: linear-gradient(90deg, rgba(46, 66, 114, 1) 0%, rgba(46, 66114, 0) 80%);
+			}
+			a {
+				text-decoration: none;
+				color: #ddd;
+			}
+			a:hover {
+				color: #fff;
+			}
+		</style>
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="main">
+			<div class="news"><h4>NEWS</h4></div>
+			<div class="container">
+				<div class="boxPadding">
+					<div class="box">
+						<div>
+							<a href="#"></a>
+								1 Lorem ipsum dolor sit amet consecte dolorum ipsa obcaecati cumque. Magni animi dolorem quis cupiditate
+								consequuntur optio maxime rerum culpa!</a
+							>
+						</div>
+						<div>
+							<a href="#">
+								2 Lorem ipsum dolor sit amet consecte dolorum ipsa obcaecati cumque. Magni animi dolorem quis cupiditate
+								consequuntur optio maxime rerum culpa!</a
+							>
+						</div>
+						<div>
+							<a href="#">
+								3 Lorem ipsum dolor sit amet consecte dolorum ipsa obcaecati cumque. Magni animi dolorem quis cupiditate
+								consequuntur optio maxime rerum culpa!</a
+							>
+						</div>
+						<div>
+							<a href="#">
+								4 Lorem ipsum dolor sit amet consecte dolorum ipsa obcaecati cumque. Magni animi dolorem quis cupiditate
+								consequuntur optio maxime rerum culpa!</a
+							>
+						</div>
+						<div>
+							<a href="#">
+								5 Lorem ipsum dolor sit amet consecte dolorum ipsa obcaecati cumque. Magni animi dolorem quis cupiditate
+								consequuntur optio maxime rerum culpa!</a
+							>
+						</div>
+					</div>
+					<div class="left"></div>
+					<div class="righ"></div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var counter, count = 0,speed = 20, delay = 2000;
+			var box = document.querySelector('.box');
+			var ilk = box.firstElementChild;
+			var width = ilk.scrollWidth;
+			var w = box.scrollWidth;
+
+			box.addEventListener("mouseout", function(){
+				clearInterval(counter);
+				clearTimeout(start)
+			})
+			box.addEventListener("mouseout", function(){
+				counter = setInterval(slide, speed)
+			})
+			function slide(){
+				count++;
+				box.style.left = (box.offsetLeft - 1) + "px";
+
+				if(count == width){
+					box.appenChild(ilk);
+					box.style.left = (box.offsetLeft + width) + "px";
+					ilk = box.firstElementChild;
+					width = ilk.scrollWidth;
+					count = 0;
+				}
+			}
+			start = setTimeout(function(){
+				counter = setInterval(slide, speed);
+			},delay)
+		</script>
+	</body>
+</html>

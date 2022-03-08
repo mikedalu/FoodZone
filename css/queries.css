@@ -406,7 +406,9 @@ below 550px/16 = 43em
   .hero .btn,
   .hero .btn:link,
   .hero .btn:visited {
-    padding: 2.4rem 1.6rem;
+    padding: 2rem 1rem;
+    width: 60%;
+    margin-top: 2rem;
   }
   .hero .hero-img {
     width: 80%;
